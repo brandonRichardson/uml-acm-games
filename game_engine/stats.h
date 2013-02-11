@@ -1,6 +1,6 @@
 /* 
  * File:   stats.h
- * Author: Owner
+ * Author: J. Madden
  *
  * Created on February 7, 2013, 10:59 PM
  */
