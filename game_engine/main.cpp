@@ -11,11 +11,11 @@
 
 using namespace std;
 
-/*
- * 
- */
+/*  As of right now, this main file is being used only to test various classes.
+ *  It probably doesn't make sense to commit any changes you may make in testing
+ *  your own code. 
+ */ 
 int main(int argc, char** argv) {
-  //Editing for the hell of it
     int i;
     Player p1("JMAD");
     Item i1("Gold Bar", 125, 5);
