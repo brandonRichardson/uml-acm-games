@@ -1,6 +1,6 @@
 /* 
  * File:   Item.h
- * Author: Owner
+ * Author: J. Madden
  *
  * Created on February 8, 2013, 7:02 PM
  */
