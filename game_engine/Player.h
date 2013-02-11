@@ -1,6 +1,6 @@
 /* 
  * File:   Player.h
- * Author: Owner
+ * Author: J. Madden
  *
  * Created on February 8, 2013, 12:16 PM
  */
