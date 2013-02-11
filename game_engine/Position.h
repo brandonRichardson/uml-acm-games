@@ -1,6 +1,6 @@
 /* 
  * File:   Position.h
- * Author: Owner
+ * Author: J. Madden
  *
  * Created on February 3, 2013, 11:00 AM
  */
