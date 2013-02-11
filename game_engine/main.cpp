@@ -15,7 +15,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    
+  //Editing for the hell of it
     int i;
     Player p1("JMAD");
     Item i1("Gold Bar", 125, 5);
