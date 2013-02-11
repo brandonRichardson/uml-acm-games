@@ -1,6 +1,6 @@
 /* 
  * File:   Inventory.h
- * Author: Owner
+ * Author: J. Madden
  *
  * Created on February 8, 2013, 6:59 PM
  */
