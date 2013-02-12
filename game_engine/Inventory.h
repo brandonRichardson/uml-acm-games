@@ -25,6 +25,7 @@ public:
     Inventory(int num_spaces){ spaces = num_spaces; num_items = 0; }
     //Getter functions
     unsigned short getSpaces(){ return spaces; }
+    unsigned short getNumItems(){ return num_items; }
     std::vector<Item> &getItemList(){ return item_list; }
     Item *getItemByName(std::string nameToFind);
     int getWeight();
