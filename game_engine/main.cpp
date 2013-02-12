@@ -11,9 +11,9 @@
 
 using namespace std;
 
-/*  As of right now, this main file is being used only to test various classes.
- *  It probably doesn't make sense to commit any changes you may make in testing
- *  your own code. 
+/*  TODO: Fix Inventory class function removeItem.
+ *        
+ *   
  */ 
 int main(int argc, char** argv) {
     int i;
@@ -45,8 +45,10 @@ int main(int argc, char** argv) {
     found = player_items.getItemByName("Apple");
     found->printItem();
     
-    p1.getInventory().displayInventory();
-    cout << "You have " << p1.getInventory().getWeight() <<
+    player_items.displayInventory();
+    player_items.removeItem(i2);
+
+    cout << "You have " << player_items.getWeight() <<
             " lbs of junk in your inventory!" << endl;
     
     return 0;

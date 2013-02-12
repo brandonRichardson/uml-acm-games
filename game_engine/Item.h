@@ -28,8 +28,12 @@ public:
     std::string getName(){ return name; }
     unsigned short getValue(){ return value; }
     unsigned short getWeight(){ return weight; }
+    bool isSelf(Item *toCheck);
     //Misc functions
     void printItem();
+    //Overloaded operators
+    bool operator==(Item toCheck);
+    bool operator==(Item *toCheck);
 };
 
 class EquippableItem : public Item{

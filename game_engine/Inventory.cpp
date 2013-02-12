@@ -6,6 +6,7 @@ Item *Inventory::getItemByName(std::string nameToFind){
   it = item_list.begin();
   while(((*it).getName() != nameToFind) && count < item_list.size()){
     it++;
+    count++;
   }
   if(count == item_list.size()){
     std::cout << "Item not found." << std::endl;
@@ -29,9 +30,23 @@ void Inventory::addItem(Item toAdd){
     std::cout << "Inventory is full!" << std::endl;
   }
 }
-Item &Inventory::removeItem(Item &toRemove){
-  //Do stuff
-  return toRemove;
+void Inventory::removeItem(Item toRemove){
+  int count = 0;
+  std::vector<Item>::iterator it;
+  it = item_list.begin();
+  std::cout << "DEBUG: entering while loop" << std::endl;
+  while(count < item_list.size()){
+    //Check if element of vector pointed at by it
+    //is the same as toRemove
+    if((*it) == toRemove){
+      item_list.erase(it);
+      num_items--;
+      return;
+    }
+    it++;
+    count++;
+    std::cout << "DEBUG: looped " << count << " times" << std::endl;
+  }
 }
 void Inventory::moveItemToBag(Item &toMove, Bag &moveInto){
     if(!moveInto.isFull()){

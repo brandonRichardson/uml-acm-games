@@ -13,7 +13,7 @@
 #include <string>
 #include "Item.h"
 
-//TODO: Define getItemByName, removeItem, moveItemToBag
+//TODO: Make removeItem() work properly. 
 
 class Inventory{
     unsigned short spaces;
@@ -30,7 +30,7 @@ public:
     int getWeight();
     //Inv. management functions (adding/removing, etc)
     void addItem(Item toAdd);
-    Item &removeItem(Item &toRemove);
+    void removeItem(Item toRemove);
     void moveItemToBag(Item &toMove, Bag &moveInto);
     bool isFull();
     //Misc functions
