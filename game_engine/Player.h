@@ -8,7 +8,10 @@
 #ifndef PLAYER_H
 #define	PLAYER_H
 
-//TODO:
+/*
+ * TODO: A lot, most of which is not doable until 
+ * we decide where we're going with this project.
+ */
 
 #include <string>
 #include "stats.h"
