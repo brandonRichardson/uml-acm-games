@@ -11,7 +11,7 @@
 
 using namespace std;
 
-/*  TODO: 
+/*  TODO: Reorganize and comment .h ffiles
  *        
  *   
  */ 
