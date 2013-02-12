@@ -9,10 +9,11 @@ int Inventory::getWeight(){
 }
 void Inventory::addItem(Item toAdd){
   if(!isFull()){
-    //std::vector<Item>::iterator it;
-    //it = item_list.end();
     item_list.push_back(toAdd);
     num_items++;
+  }
+  else{
+    std::cout << "Inventory is full!" << std::endl;
   }
 }
 Item &Inventory::removeItem(Item &toRemove){
@@ -29,7 +30,7 @@ void Inventory::moveItemToBag(Item &toMove, Bag &moveInto){
       std::cout << "The container is full." << std::endl;
     }
 }
-bool isFull(){
+bool Inventory::isFull(){
   return (num_items < spaces) ? false : true;
 }
 void Inventory::displayInventory(){

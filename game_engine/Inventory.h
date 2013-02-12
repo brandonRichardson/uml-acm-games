@@ -31,6 +31,7 @@ public:
     void addItem(Item toAdd);
     Item &removeItem(Item &toRemove);
     void moveItemToBag(Item &toMove, Bag &moveInto);
+    bool isFull();
     //Misc functions
     void displayInventory();
     

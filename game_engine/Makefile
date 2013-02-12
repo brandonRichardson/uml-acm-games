@@ -1,3 +1,9 @@
+# This Makefile was stolen from mulhern's Computing II
+# class website! For this reason, it's not necessarily
+# ideal for our purposes. Anyone willing to cut some of
+# the fat off of it would be greatly appreciated.
+
+
 SOURCES := $(wildcard *.cpp)
 OBJECTS := $(patsubst %.cpp, %.o, $(SOURCES))
 

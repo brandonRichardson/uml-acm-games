@@ -71,7 +71,7 @@ public:
     //Inv. management functions
     void addItem(Item toAdd);
     Item &removeItem(Item toRemove);
-    bool isFull(){ return (num_items == slots) ? true : false; }
+    bool isFull(){ return (num_items < slots) ? false : true; }
     //Misc. functions
 };
 #endif	/* ITEM_H */

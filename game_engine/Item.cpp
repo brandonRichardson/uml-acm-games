@@ -60,9 +60,10 @@ Bag::Bag(std::string theName, unsigned short num_slots) : Item(theName, 0, 0),
 
 void Bag::addItem(Item toAdd){
   if(!isFull()){
-    //std::vector<Item>::iterator it;
-    //it = item_list.end();
-    item_list.insert(item_list.end(), toAdd);
+    item_list.push_back(toAdd);
     num_items++;
+  }
+  else{
+    std::cout << "Bag is full!" << std::endl;
   }
 }
