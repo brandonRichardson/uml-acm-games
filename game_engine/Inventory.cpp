@@ -1,5 +1,18 @@
 #include "Inventory.h"
 
+Item *Inventory::getItemByName(std::string nameToFind){
+  std::vector<Item>::iterator it;
+  int count = 0;
+  it = item_list.begin();
+  while(((*it).getName() != nameToFind) && count < item_list.size()){
+    it++;
+  }
+  if(count == item_list.size()){
+    std::cout << "Item not found." << std::endl;
+    return NULL;
+  }
+  return &(*it);
+}
 int Inventory::getWeight(){
     int i, weight = 0;
     for(i = 0 ; i < item_list.size() ; i++){

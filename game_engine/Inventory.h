@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <iostream>
+#include <string>
 #include "Item.h"
 
 //TODO: Define getItemByName, removeItem, moveItemToBag
@@ -24,8 +25,8 @@ public:
     Inventory(int num_spaces){ spaces = num_spaces; }
     //Getter functions
     unsigned short getSpaces(){ return spaces; }
-    std:: vector<Item> &getItemList(){ return item_list; }
-    Item &getItemByName(std::string nameToFind);
+    std::vector<Item> &getItemList(){ return item_list; }
+    Item *getItemByName(std::string nameToFind);
     int getWeight();
     //Inv. management functions (adding/removing, etc)
     void addItem(Item toAdd);
