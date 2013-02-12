@@ -1,4 +1,3 @@
-
 #include "Inventory.h"
 
 int Inventory::getWeight(){
@@ -9,12 +8,12 @@ int Inventory::getWeight(){
     return weight;
 }
 void Inventory::addItem(Item toAdd){
-    if(num_items < spaces){
-        std::vector<Item>::iterator it;
-        it = item_list.end();
-        item_list.insert(it, toAdd);
-        num_items++;
-    }
+  if(!isFull()){
+    //std::vector<Item>::iterator it;
+    //it = item_list.end();
+    item_list.push_back(toAdd);
+    num_items++;
+  }
 }
 Item &Inventory::removeItem(Item &toRemove){
   //Do stuff
@@ -29,6 +28,9 @@ void Inventory::moveItemToBag(Item &toMove, Bag &moveInto){
     else{
       std::cout << "The container is full." << std::endl;
     }
+}
+bool isFull(){
+  return (num_items < spaces) ? false : true;
 }
 void Inventory::displayInventory(){
     int i;
