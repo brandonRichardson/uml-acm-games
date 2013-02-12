@@ -22,7 +22,7 @@ class Inventory{
 public:
     //Constructors
     Inventory(){ spaces = 10; num_items = 0; }
-    Inventory(int num_spaces){ spaces = num_spaces; }
+    Inventory(int num_spaces){ spaces = num_spaces; number_items = 0; }
     //Getter functions
     unsigned short getSpaces(){ return spaces; }
     std::vector<Item> &getItemList(){ return item_list; }
