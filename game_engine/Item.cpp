@@ -40,6 +40,9 @@ bool Item::operator==(Item toCheck){
 bool Item::operator==(Item *toCheck){
   return toCheck == this ? true : false;
 }
+bool Item::operator==(Item &toCheck){
+  return &toCheck == this;
+}
 ////////////////////////////////////////////////////////////////////////////////
 //DEFINITIONS FOR CLASS EQUIPPABLEITEM
 void EquippableItem::changeStatBonus(stat toChange, short amount){

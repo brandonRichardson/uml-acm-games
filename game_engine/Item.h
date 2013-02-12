@@ -34,6 +34,7 @@ public:
     //Overloaded operators
     bool operator==(Item toCheck);
     bool operator==(Item *toCheck);
+    bool operator==(Item &toCheck);
 };
 
 class EquippableItem : public Item{

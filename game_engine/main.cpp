@@ -11,7 +11,7 @@
 
 using namespace std;
 
-/*  TODO: Fix Inventory class function removeItem.
+/*  TODO: 
  *        
  *   
  */ 
@@ -42,11 +42,15 @@ int main(int argc, char** argv) {
     bag_items = b1.getItemList();
     bag_items.at(0).printItem();
     
-    found = player_items.getItemByName("Apple");
+    found = player_items.getItemByName("Broadsword");
     found->printItem();
     
+    cout << "Inventory before removal:" << endl;
     player_items.displayInventory();
-    player_items.removeItem(i2);
+    player_items.removeItem(found);
+
+    cout << "Inventory after removal: " << endl;
+    player_items.displayInventory();
 
     cout << "You have " << player_items.getWeight() <<
             " lbs of junk in your inventory!" << endl;

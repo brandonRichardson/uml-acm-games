@@ -30,7 +30,7 @@ void Inventory::addItem(Item toAdd){
     std::cout << "Inventory is full!" << std::endl;
   }
 }
-void Inventory::removeItem(Item toRemove){
+void Inventory::removeItem(Item *toRemove){
   int count = 0;
   std::vector<Item>::iterator it;
   it = item_list.begin();
@@ -38,7 +38,7 @@ void Inventory::removeItem(Item toRemove){
   while(count < item_list.size()){
     //Check if element of vector pointed at by it
     //is the same as toRemove
-    if((*it) == toRemove){
+    if(&(*it) == toRemove){
       item_list.erase(it);
       num_items--;
       return;
@@ -49,10 +49,11 @@ void Inventory::removeItem(Item toRemove){
   }
 }
 void Inventory::moveItemToBag(Item &toMove, Bag &moveInto){
-    if(!moveInto.isFull()){
+  Item *temp = &toMove;  
+  if(!moveInto.isFull()){
       moveInto.addItem(toMove);
       //Remove Item from original container
-      removeItem(toMove);
+      removeItem(temp);
     }
     else{
       std::cout << "The container is full." << std::endl;
